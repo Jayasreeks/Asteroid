@@ -3,13 +3,22 @@ from constants import *
 
 def main():
     pygame.init()
-    screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-    while True:
-        for event in pygame.event.get():
+    
+    # this will create the pop up display screen 
+    screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT)) 
+    
+    clock = pygame.time.Clock()
+    dt=0
+    
+    running= True
+    while running:
+        for event in pygame.event.get(): # will get all the events from the screen 
             if event.type == pygame.QUIT:
-                return
+                running = False
         screen.fill(color="black")
         pygame.display.flip() 
+        
+        dt=clock.tick(60)/1000 #Calculate delta time at the end
     print("Starting Asteroids!")
     print(f"Screen width: {SCREEN_WIDTH}")
     print(f"Screen height: {SCREEN_HEIGHT}")
