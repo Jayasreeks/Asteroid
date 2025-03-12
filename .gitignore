@@ -1,0 +1,52 @@
+venv/
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env/
+.venv/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+
+# Logs and databases
+*.log
+*.sqlite3
+*.db
+
+# Testing and coverage reports
+.coverage
+htmlcov/
+.tox/
+nosetests.xml
+pytest_cache/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# MyPy type checker cache
+.mypy_cache/
+
+# PyInstaller output
+*.spec
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local environment files
+.env
+.envrc
+*.secret
+
+# Ignore any private files
+*.pem
+*.key
