@@ -1,0 +1,4 @@
+Imports in python:
+
+In Python, each .py file is a module, and we can import functions, variables, and classes from one module into another with the 
+import statement. The name of a module is the filename (without the .py extension).
