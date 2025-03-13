@@ -39,7 +39,7 @@ def main():
         pygame.display.flip() 
         """
         screen.fill(color="black")
-        updatable.update(dt) # updates all obj int he updatable groups
+        updatable.update(dt) # updates all obj in the updatable groups
         
         #draw all obj in the drawable group 
         for obj in drawable:
