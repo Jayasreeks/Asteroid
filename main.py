@@ -48,7 +48,7 @@ def main():
         #11. call .update() method on the updatable group
         updatable.update(dt) # updates all obj in the updatable groups
         
-        #draw all obj in the drawable group 
+        #12. draw all obj in the drawable group 
         for obj in drawable:
             obj.draw(screen)
             
