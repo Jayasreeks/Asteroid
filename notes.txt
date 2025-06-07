@@ -58,6 +58,9 @@ used pygames module:
 8.pygame.math.Vector2.rotate - rotates a vector by a given angle in degrees.
   - usage - roate(angle) - clockwise rotation
 
+9. pygame.draw.circle - to draw astroids:
+   syntax: - circle(surface, color, center, radius, width=0, draw_top_right=None, draw_top_left=None, draw_bottom_left=None, draw_bottom_right=None) -> Rect
+
 
 Concepts inside the project:
 

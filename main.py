@@ -1,6 +1,8 @@
 import pygame
 from constants import *
 from player import Player # player is a module and Player is the class inside it so importing only the class 
+from asteroid import Asteroid
+from asteroidfield import *
 
 
 def main():
@@ -13,17 +15,28 @@ def main():
     clock = pygame.time.Clock()
     dt=0
     
+    #9.1 creating 2 sprite groups for spaceships(players)
     updatable=pygame.sprite.Group() # all obj that need update 
     drawable=pygame.sprite.Group() # all obj tht need drawing 
     
-    #9.adding 2 groups as containers to the player class
+    #9.2 .adding 2 groups as containers to the player class
     Player.containers=(updatable,drawable)# containers- class variable of Player class, can belong to both group at the same time
     
     #create variable after creating group
     #10. instantiate the player object - to spawn in the middle of the screen - 
     player1 = Player(SCREEN_WIDTH/2, SCREEN_HEIGHT/2) # creating player pbject before loop 
     
+    #13.creating asteroid group using pygame sprites.group:
+    asteroids = pygame.sprite.Group()
     
+    #14. static container for the asteroid class
+    Asteroid.containers = (asteroids,updatable,drawable)
+    
+    #15. static containers of AsteroidField
+    AsteroidField.containers = (updatable)
+    
+    #16. creating astroidfield obj
+    Asteroidfield_obj = AsteroidField()
     #3.game loop starts
     running= True
     while running:
