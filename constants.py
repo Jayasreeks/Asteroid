@@ -10,3 +10,4 @@ PLAYER_TURN_SPEED = 300 # for the movement of left,right, up and down
 PLAYER_SPEED = 200
 SHOT_RADIUS = 5
 PLAYER_SHOOT_SPEED = 500
+PLAYER_SHOOT_COOLDOWN = 0.3
