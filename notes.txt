@@ -44,3 +44,21 @@ used pygames module:
 
    - if exclude argument is given then eventtype argumnet must be "None", exclude argumet excludes those types or sequence and 
    returns other message and will be removed from the queue
+
+6. pygame.time.Clock(): - creating an clock object to keep track of the time
+   - it also help control the game's framerate
+   - with the clock object created use the .tick() method form time moudle and pass 60- this will pause the gameloop until 1/60th of a second has passed
+   - the .tick() method will return the time that has passed since hte last time it was called and this is delta time
+   - with this it will use less system resources
+   syntax:
+         update the clock
+         tick(framerate=0) -> milliseconds
+
+
+Concepts inside the project:
+
+1. FPS: - frames per second - no of frames displayed on the screen in one second
+   - here we have  60 FPS
+2. Delta time:
+   - amount of time that has passed since the last frame was drawn, the asteroids must 
+   function smoothly regradless of the performance of the computer speed

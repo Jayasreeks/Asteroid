@@ -9,6 +9,7 @@ def main():
     #2. this will create the pop up display screen 
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT)) 
     
+    #7.creating an clock object to keep track of the time 
     clock = pygame.time.Clock()
     dt=0
     
@@ -47,8 +48,11 @@ def main():
         #draw all obj in the drawable group 
         for obj in drawable:
             obj.draw(screen)
+            
         #5.refresh the surface screen 
         pygame.display.flip()
+        
+        #8. for calculating the amount of time that has passed since the last time it was called
         dt=clock.tick(60)/1000 #Calculate delta time at the end
         
     print("Starting Asteroids!")
