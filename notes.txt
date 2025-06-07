@@ -2,3 +2,45 @@ Imports in python:
 
 In Python, each .py file is a module, and we can import functions, variables, and classes from one module into another with the 
 import statement. The name of a module is the filename (without the .py extension).
+
+used pygames module:
+1. pygame.init() - used to initialize all the imported pygame modules,
+   it can also be used to initialize individual moduels that are only need for the program 
+   for individual modules to get started it raises exception if failed 
+   -diff modules within pygames can be initialized seperately to speed up the program
+
+2. pygame.display.set_mode(): - pygame.display module is used to control the display window and the screen 
+   -this .set_mode within display module will initialize a window or screen for display
+   syntax: set_mode(size=(0, 0), flags=0, depth=0, display=0, vsync=0) -> Surface
+   
+   -this method will return an display surface, the arguments passed are for display types
+   - calling the function will directly initialize the pygame.display module if alsready not initialized
+   -arguments:
+            - size=(width,height), when no size is passed or is(0,0), the surface is created
+            and will have the same size as the current screen resolution(laptop or desktop full window size)
+            - flags- collection of additional options, 
+            - depth- number of bits to use for color  
+
+3. .fill() method from surface module in pygames:
+   -syntax: fill(color, rect=None, special_flags=0) -> Rect
+   - fills the surface with the solid color specofied
+   - the rect argument will restrict the fill to a specific area
+   - the color argument can either be a color text or as RGB code
+   - the syntax can be either of the two:
+        -#screen.fill(color="black")
+        -pygame.Surface.fill(screen,(41,9,51))
+
+4. pygame.display.flip() - update or refresh the full display surface to the screen
+   - update the contents of the entire display.
+
+5. pygame.event.get()- gets the events from the queue
+   - this return the event list, get all the message and remove them from the queue
+   - if a type is given only those message will be removeed from the queue and returned
+   - syntax:
+           get events from the queue
+           get(eventtype=None) -> Eventlist
+           get(eventtype=None, pump=True) -> Eventlist
+           get(eventtype=None, pump=True, exclude=None) -> Eventlist
+
+   - if exclude argument is given then eventtype argumnet must be "None", exclude argumet excludes those types or sequence and 
+   returns other message and will be removed from the queue

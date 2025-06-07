@@ -4,9 +4,9 @@ from player import Player # player is a module and Player is the class inside it
 
 
 def main():
-    pygame.init()
+    pygame.init() #1.initializes all the imported pygame modules
     
-    # this will create the pop up display screen 
+    #2. this will create the pop up display screen 
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT)) 
     
     clock = pygame.time.Clock()
@@ -22,11 +22,12 @@ def main():
     player1 = Player(SCREEN_WIDTH/2, SCREEN_HEIGHT/2) # creating player pbject before loop 
     
     
-    #game loop starts
+    #3.game loop starts
     running= True
     while running:
+        #6. adding surface(screen) close event
         for event in pygame.event.get(): # will get all the events from the screen 
-            if event.type == pygame.QUIT:
+            if event.type == pygame.QUIT: # check if the user has closed the window..if yes exit the game loop and make the window's close button to work
                 running = False
                 
         #code b4 adding groups
@@ -38,13 +39,15 @@ def main():
         player1.draw(screen)
         pygame.display.flip() 
         """
-        screen.fill(color="black")
+        #4.set the surface color to balck 
+        pygame.Surface.fill(screen,(23,25,93))
+        #screen.fill(color="black") - can also be this way
         updatable.update(dt) # updates all obj in the updatable groups
         
         #draw all obj in the drawable group 
         for obj in drawable:
             obj.draw(screen)
-        
+        #5.refresh the surface screen 
         pygame.display.flip()
         dt=clock.tick(60)/1000 #Calculate delta time at the end
         
