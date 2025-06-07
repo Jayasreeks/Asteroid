@@ -37,6 +37,7 @@ def main():
     
     #16. creating astroidfield obj
     Asteroidfield_obj = AsteroidField()
+    
     #3.game loop starts
     running= True
     while running:
@@ -60,6 +61,12 @@ def main():
         
         #11. call .update() method on the updatable group
         updatable.update(dt) # updates all obj in the updatable groups
+        
+        #17.
+        for asteroid in asteroids:
+            if(asteroid.check_collision(player1)):
+                print("Game over!")
+                running = False
         
         #12. draw all obj in the drawable group 
         for obj in drawable:
