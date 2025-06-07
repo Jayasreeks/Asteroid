@@ -80,8 +80,8 @@ def main():
                 #20. check if the bullet shots collide with the astroids
             for shot in shots:
                 if(asteroid.check_collision(shot)):
-                    shot.kill()
-                    asteroid.kill() #kill() is inbuilt method in pygames
+                    shot.kill() #kill() is inbuilt method in pygames
+                    asteroid.split()  # method in asteroid class
         
         #12. draw all obj in the drawable group 
         for obj in drawable:
