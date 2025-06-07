@@ -16,10 +16,11 @@ def main():
     updatable=pygame.sprite.Group() # all obj that need update 
     drawable=pygame.sprite.Group() # all obj tht need drawing 
     
-    # adding groups as containers to the player class
-    Player.containers=(updatable,drawable)# containers- class variable of Player class 
+    #9.adding 2 groups as containers to the player class
+    Player.containers=(updatable,drawable)# containers- class variable of Player class, can belong to both group at the same time
     
-    #9. instantiate the player object - to spawn in the middle of the screen
+    #create variable after creating group
+    #10. instantiate the player object - to spawn in the middle of the screen - 
     player1 = Player(SCREEN_WIDTH/2, SCREEN_HEIGHT/2) # creating player pbject before loop 
     
     
@@ -43,6 +44,8 @@ def main():
         #4.set the surface color to balck 
         pygame.Surface.fill(screen,(23,25,93))
         #screen.fill(color="black") - can also be this way
+        
+        #11. call .update() method on the updatable group
         updatable.update(dt) # updates all obj in the updatable groups
         
         #draw all obj in the drawable group 

@@ -19,7 +19,7 @@ class Player(CircleShape):
     def draw(self,screen):
         pygame.draw.polygon(screen, "white",self.triangle(),3)
         
-    def rotate(self,dt):
+    def rotate(self,dt): # this roate is diff from pygame.vector.rotate() function- this one here is custom func
         self.rotation += PLAYER_TURN_SPEED * dt
         
     def update(self, dt):
