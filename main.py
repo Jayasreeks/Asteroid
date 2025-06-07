@@ -3,6 +3,7 @@ from constants import *
 from player import Player # player is a module and Player is the class inside it so importing only the class 
 from asteroid import Asteroid
 from asteroidfield import *
+from shot import Shot
 
 
 def main():
@@ -40,6 +41,9 @@ def main():
     
     #18.sprite group for shots
     shots = pygame.sprite.Group()
+    
+    #19. static containers for shots
+    Shot.containers =(shots,updatable,drawable)
     
     #3.game loop starts
     running= True

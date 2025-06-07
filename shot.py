@@ -1,10 +1,10 @@
 import pygame
 from circleshape import CircleShape
-import constants
+from constants import *
 
 class Shot(CircleShape):
-    def __init__(self,x, y, radius):
-        super().__init__(x,y,radius)
+    def __init__(self,x, y):
+        super().__init__(x,y,SHOT_RADIUS)
     
     #override draw
     def draw(self,screen):

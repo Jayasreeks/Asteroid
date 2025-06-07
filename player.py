@@ -20,18 +20,6 @@ class Player(CircleShape):
     def draw(self,screen):
         pygame.draw.polygon(screen, "white",self.triangle(),3)
         
-    def rotate(self,dt): # this roate is diff from pygame.vector.rotate() function- this one here is custom func
-        self.rotation += PLAYER_TURN_SPEED * dt
-        
-    def move(self, dt):
-        forward = pygame.Vector2(0, 1).rotate(self.rotation)
-        self.position += forward * PLAYER_SPEED * dt
-        
-    #after shot class
-    def shoot(self):
-        shot = Shot(self.position.x,self.position.y,SHOT_RADIUS)
-        direction = pygame.Vector2(0,1).rotate(self.roation)
-        shot.velocity = direction * PLAYER_SHOOT_SPEED
         
     def update(self, dt):
         keys = pygame.key.get_pressed()
@@ -46,6 +34,19 @@ class Player(CircleShape):
             self.move(-dt)
         if keys[pygame.K_SPACE]:
             self.shoot()
+            
+    def rotate(self,dt): # this roate is diff from pygame.vector.rotate() function- this one here is custom func
+        self.rotation += PLAYER_TURN_SPEED * dt
+        
+    def move(self, dt):
+        forward = pygame.Vector2(0, 1).rotate(self.rotation)
+        self.position += forward * PLAYER_SPEED * dt
+        
+    #after shot class
+    def shoot(self):
+        shot = Shot(self.position.x,self.position.y)
+        direction = pygame.Vector2(0,1).rotate(self.rotation)
+        shot.velocity = direction * PLAYER_SHOOT_SPEED
     
     
         
