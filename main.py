@@ -13,6 +13,10 @@ def main():
     #2. this will create the pop up display screen 
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT)) 
     
+    #adding bg image
+    background_image = pygame.image.load("assets/space.jpg").convert()
+    background_image = pygame.transform.scale(background_image,(SCREEN_WIDTH, SCREEN_HEIGHT))
+    
     #7.creating an clock object to keep track of the time 
     clock = pygame.time.Clock()
     dt=0
@@ -20,7 +24,7 @@ def main():
     #9.1 creating 2 sprite groups for spaceships(players)
     updatable=pygame.sprite.Group() # all obj that need update 
     drawable=pygame.sprite.Group() # all obj tht need drawing 
-    
+      
     #9.2 .adding 2 groups as containers to the player class
     Player.containers=(updatable,drawable)# containers- class variable of Player class, can belong to both group at the same time
     
@@ -55,18 +59,12 @@ def main():
             if event.type == pygame.QUIT: # check if the user has closed the window..if yes exit the game loop and make the window's close button to work
                 running = False
                 
-        #code b4 adding groups
-        """#update player state
-        player1.update(dt)
-        
-        #render everything from here        
-        screen.fill(color="black")
-        player1.draw(screen)
-        pygame.display.flip() 
-        """
-        #4.set the surface color to balck 
-        pygame.Surface.fill(screen,(23,25,93))
+        #4.1 set the surface color to balck 
+        #pygame.Surface.fill(screen,(23,25,93))
         #screen.fill(color="black") - can also be this way
+             #or 
+        #4.2 set bg image with image
+        screen.blit(background_image,(0,0))
         
         #11. call .update() method on the updatable group
         updatable.update(dt) # updates all obj in the updatable groups
