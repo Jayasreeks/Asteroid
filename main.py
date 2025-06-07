@@ -34,6 +34,7 @@ def main():
     Asteroid.containers = (asteroids,updatable,drawable)
     
     #15. static containers of AsteroidField
+    astroidfields = pygame.sprite.Group()
     AsteroidField.containers = (updatable)
     
     #16. creating astroidfield obj
