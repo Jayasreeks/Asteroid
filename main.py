@@ -4,6 +4,7 @@ from player import Player # player is a module and Player is the class inside it
 from asteroid import Asteroid
 from asteroidfield import *
 from shot import Shot
+import sys
 
 
 def main():
@@ -75,6 +76,12 @@ def main():
             if(asteroid.check_collision(player1)):
                 print("Game over!")
                 running = False
+                
+                #20. check if the bullet shots collide with the astroids
+            for shot in shots:
+                if(asteroid.check_collision(shot)):
+                    shot.kill()
+                    asteroid.kill() #kill() is inbuilt method in pygames
         
         #12. draw all obj in the drawable group 
         for obj in drawable:
