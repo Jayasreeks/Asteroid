@@ -54,6 +54,8 @@ used pygames module:
          update the clock
          tick(framerate=0) -> milliseconds
 
+7. Sprite - base class in pygames to represent visual objects in the game 
+
 
 Concepts inside the project:
 
