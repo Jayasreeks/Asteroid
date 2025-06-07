@@ -55,6 +55,8 @@ used pygames module:
          tick(framerate=0) -> milliseconds
 
 7. Sprite - base class in pygames to represent visual objects in the game 
+8.pygame.math.Vector2.rotate - rotates a vector by a given angle in degrees.
+  - usage - roate(angle) - clockwise rotation
 
 
 Concepts inside the project:

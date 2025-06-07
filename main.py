@@ -19,7 +19,7 @@ def main():
     # adding groups as containers to the player class
     Player.containers=(updatable,drawable)# containers- class variable of Player class 
     
-    # drawing the player after the screen appears and b4 flipping the screen
+    #9. instantiate the player object - to spawn in the middle of the screen
     player1 = Player(SCREEN_WIDTH/2, SCREEN_HEIGHT/2) # creating player pbject before loop 
     
     
