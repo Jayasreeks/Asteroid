@@ -38,7 +38,8 @@ def main():
     #16. creating astroidfield obj
     Asteroidfield_obj = AsteroidField()
     
-    
+    #18.sprite group for shots
+    shots = pygame.sprite.Group()
     
     #3.game loop starts
     running= True

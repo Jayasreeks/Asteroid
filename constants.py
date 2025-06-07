@@ -9,3 +9,4 @@ PLAYER_RADIUS = 20 #size of the players ship
 PLAYER_TURN_SPEED = 300 # for the movement of left,right, up and down
 PLAYER_SPEED = 200
 SHOT_RADIUS = 5
+PLAYER_SHOOT_SPEED = 500
