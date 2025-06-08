@@ -91,20 +91,13 @@ def main():
         #8. for calculating the amount of time that has passed since the last time it was called
         dt=clock.tick(60)/1000 #Calculate delta time at the end
         
-    print("Starting Asteroids!")
-    print(f"Screen width: {SCREEN_WIDTH}")
-    print(f"Screen height: {SCREEN_HEIGHT}")
+    #print("Starting Asteroids!")
+    #print(f"Screen width: {SCREEN_WIDTH}")
+    #print(f"Screen height: {SCREEN_HEIGHT}")
 
 
 if __name__ == "__main__":       
     main()
-    """
-This line ensures the main() function is only called when this
-file is run directly; it won't run if it's imported as a module.
-It's considered the "pythonic" way to structure an executable program
-in Python.
 
-
-    """
     
 
